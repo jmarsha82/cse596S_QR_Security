@@ -1,18 +1,18 @@
 # CSE 569S Final Group Project - QR Code Walkthrough
 
 ## To test out Quirc's qrtest.c application
-1.  Navigate to the "our testing" directory
+1.  Navigate to the "our_testing" directory
 2.  Run the compiled qrtest using the following command:
 ```
 ./qrtest <pathtoimage> -d -v
 ```
 ## To perform fuzzing
-3.  Once you have confirmed that the application runs you can perform an afl-fuzz by navigating to the "our testing/tests" folder and run the following command:
+3.  Once you have confirmed that the application runs you can perform an afl-fuzz by navigating to the "our_testing/tests" folder and run the following command (make sure the correct input image is available and that your output directory is empty):
 ```
-afl-clang qrtest.c -I/include -L/home/kali/QRCode/quirc/lib -o instrument_qrtest
+afl-fuzz -i input/ -o output/ ./instrument_qrtest
 ```
 4.  Once you have finished using afl-fuzz you have the option to run lib fuzz by navigating back one directory.
-5.  Once you are back in the "our testing" directory run the following command to start lib fuzz
+5.  Once you are back in the "our_testing" directory run the following command to start lib fuzz
 ```
 ./qrFuzzTest ./corpus -max_len=9000 -detect_leaks=0
 ```
