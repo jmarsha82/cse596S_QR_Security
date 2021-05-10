@@ -6,6 +6,7 @@
 ```
 ./qrtest <pathtoimage> -d -v
 ```
+## To perform fuzzing
 3.  Once you have confirmed that the application runs you can perform an afl-fuzz by navigating to the "our testing/tests" folder and run the following command:
 ```
 afl-clang qrtest.c -I/include -L/home/kali/QRCode/quirc/lib -o instrument_qrtest
