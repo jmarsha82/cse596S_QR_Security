@@ -1,0 +1,12 @@
+[submodule "quirc"]
+	path = quirc
+	url = https://github.com/dlbeer/quirc
+[submodule "ZXing-C++"]
+	path = ZXing-C++
+	url = https://github.com/nu-book/zxing-cpp
+[submodule "Privacy"]
+	path = Privacy
+	url = https://github.com/SecUSo/privacy-friendly-qr-scanner
+[submodule "android-afl"]
+	path = android-afl
+	url = https://github.com/ele7enxxh/android-afl
